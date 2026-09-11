@@ -1,0 +1,120 @@
+<!-- Автор страницы: Кадринов Мирас (Студент 2) -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Кадринов Мирас">
+    <meta name="description" content="Онлайн-бронирование столиков и предзаказ в кофейне Coffeeboom.">
+    <title>Coffeeboom — Бронирование столика</title>
+</head>
+<body>
+
+    <header>
+        <h1>Забронировать столик в Coffeeboom</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="booking.html">Забронировать стол</a></li>
+                <li><a href="locations.html">Филиалы</a></li>
+                <li><a href="colophon.html">О сайте</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Форма бронирования столика</h2>
+            <p>Заполните форму ниже, чтобы забронировать столик в удобное для вас время. Наш администратор свяжется с вами для подтверждения.</p>
+
+            <!-- 
+                Комментарий: На текущем этапе разработки серверная обработка отсутствуют (отсутствует backend).
+                Форма отправляет данные на заплатку "#" методом POST. Обработка на стороне сервера будет добавлена позже.
+            -->
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Контактные данные гостя</legend>
+                    
+                    <p>
+                        <label for="full-name">Ваше имя и фамилия:</label><br>
+                        <input type="text" id="full-name" name="full_name" placeholder="Иван Иванов" required>
+                    </p>
+
+                    <p>
+                        <label for="guest-email">Электронная почта:</label><br>
+                        <input type="email" id="guest-email" name="email" placeholder="example@mail.kz" required>
+                    </p>
+
+                    <p>
+                        <label for="guest-phone">Номер телефона:</label><br>
+                        <input type="tel" id="guest-phone" name="phone" placeholder="+77071234567" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Детали бронирования</legend>
+
+                    <p>
+                        <label for="booking-date">Дата визита:</label><br>
+                        <input type="date" id="booking-date" name="date" required>
+                    </p>
+
+                    <p>
+                        <label for="guests-count">Количество гостей (от 1 до 10):</label><br>
+                        <input type="number" id="guests-count" name="guests" min="1" max="10" placeholder="2" required>
+                    </p>
+
+                    <p>
+                        <label for="booking-time">Желаемое время:</label><br>
+                        <select id="booking-time" name="time" required>
+                            <option value="">-- Выберите время --</option>
+                            <option value="10:00">10:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="20:00">20:00</option>
+                        </select>
+                    </p>
+
+                    <p>Зона посадки:</p>
+                    <p>
+                        <input type="radio" id="zone-non-smoking" name="zone" value="non-smoking" checked>
+                        <label for="zone-non-smoking">Основной зал (для некурящих)</label><br>
+
+                        <input type="radio" id="zone-window" name="zone" value="window">
+                        <label for="zone-window">Столик у окна</label><br>
+
+                        <input type="radio" id="zone-terrace" name="zone" value="terrace">
+                        <label for="zone-terrace">Летняя терраса</label>
+                    </p>
+
+                    <p>Дополнительные опции:</p>
+                    <p>
+                        <input type="checkbox" id="high-chair" name="options" value="baby_chair">
+                        <label for="high-chair">Нужен детский стульчик</label>
+                    </p>
+
+                    <p>
+                        <label for="special-requests">Особые пожелания или аллергии:</label><br>
+                        <textarea id="special-requests" name="requests" rows="4" cols="40" placeholder="Укажите Ваши пожелания..."></textarea>
+                    </p>
+                </fieldset>
+
+                <!-- Комментарий: Использован div для объединения кнопок формы, так как нет подходящего семантического тега для контейнера кнопок -->
+                <div>
+                    <button type="submit">Отправить заявку</button>
+                    <button type="reset">Очистить форму</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Контакты Coffeeboom: г. Астана, ул. Достык 13 | Тел: <a href="tel:+77172000000">+7 (7172) 00-00-00</a></p>
+        <p>&copy; 2026 Coffeeboom Project. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
