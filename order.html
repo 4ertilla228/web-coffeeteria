@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Оформление предзаказа кофе навынос">
+    <meta name="author" content="Alan Baiguzhinov">
+    <title>Coffeeboom MEGA | Предзаказ</title>
+</head>
+<body>
+    <!-- Автор: Алан Байгужинов -->
+    <!-- Использована строгая структура заголовков: h1 -> h2 -> h3 без пропусков -->
+    <header>
+        <h1>Предзаказ кофе навынос</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+                <li><a href="order.html">Предзаказ</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="booking.html">Бронь столов</a></li>
+                <li><a href="colophon.html">О проекте</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Как сделать заказ?</h2>
+            <p>
+                Экономьте свое время! Сделайте заказ онлайн, и ваш напиток будет готов ровно к вашему приходу в ТРЦ MEGA. 
+                Наша система работает очень просто: вы заполняете данные, мы принимаем их в работу, 
+                а вы забираете горячий кофе без очереди. Внимание: оплата производится на кассе. 
+                Для постоянных клиентов действует система <abbr title="Скидка постоянного гостя">СПГ</abbr>, которая дает <small>10% скидки</small>.
+            </p>
+            
+            <ol start="1">
+                <li>Заполните форму ниже.</li>
+                <li>Укажите точное время вашего визита.</li>
+                <li>Получите заказ у бариста, назвав свое имя.</li>
+            </ol>
+
+            <img src="images/takeaway.jpg" alt="Бумажный стаканчик кофе Coffeeboom навынос">
+
+            <h3>Форма заказа</h3>
+            <!-- Форма пока ничего не отправляет, так как на проекте еще нет серверной части -->
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Ваши данные и выбор напитка</legend>
+                    
+                    <div>
+                        <!-- div использован здесь, так как нет подходящего семантического тега для обертки пары label+input внутри формы -->
+                        <label for="userName">Ваше имя:</label>
+                        <input type="text" id="userName" name="userName" required placeholder="Введите имя">
+                    </div>
+                    
+                    <div>
+                        <!-- div использован для группировки элемента формы -->
+                        <label for="userEmail">Email для чека:</label>
+                        <input type="email" id="userEmail" name="userEmail" required placeholder="example@mail.com">
+                    </div>
+                    
+                    <div>
+                        <!-- div использован для группировки элемента формы -->
+                        <label for="userPhone">Номер телефона:</label>
+                        <input type="tel" id="userPhone" name="userPhone" required placeholder="+7 (777) 000-00-00">
+                    </div>
+
+                    <div>
+                        <!-- div использован для группировки элемента формы -->
+                        <label for="cupsCount">Количество порций:</label>
+                        <input type="number" id="cupsCount" name="cupsCount" min="1" max="10" required>
+                    </div>
+
+                    <div>
+                        <!-- div использован для группировки элемента формы -->
+                        <label for="pickupDate">Дата самовывоза:</label>
+                        <input type="date" id="pickupDate" name="pickupDate" required>
+                    </div>
+
+                    <div>
+                        <!-- div использован для группировки элемента формы -->
+                        <label for="drinkSelect">Выберите напиток:</label>
+                        <select id="drinkSelect" name="drinkSelect">
+                            <option value="espresso">Эспрессо</option>
+                            <option value="cappuccino">Капучино</option>
+                            <option value="latte">Латте</option>
+                        </select>
+                    </div>
+
+                    <fieldset>
+                        <legend>Тип молока</legend>
+                        <input type="radio" id="milkCow" name="milkType" value="cow" checked>
+                        <label for="milkCow">Коровье</label><br>
+                        <input type="radio" id="milkAlmond" name="milkType" value="almond">
+                        <label for="milkAlmond">Миндальное</label>
+                    </fieldset>
+
+                    <div>
+                        <!-- div использован для группировки элемента формы -->
+                        <input type="checkbox" id="addSyrup" name="addSyrup">
+                        <label for="addSyrup">Добавить карамельный сироп <span class="highlight"><!-- span использован для выделения части текста без изменения его смысловой нагрузки --> (+200&#8376;)</span></label>
+                    </div>
+
+                    <div>
+                        <!-- div использован для группировки элемента формы -->
+                        <label for="userComment">Комментарий к заказу:</label><br>
+                        <textarea id="userComment" name="userComment" rows="4" cols="30" placeholder="Например: сделать погорячее"></textarea>
+                    </div>
+                    
+                    <button type="submit"><b>Оформить заказ</b></button>
+                    <button type="reset"><i>Очистить форму</i></button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Свяжитесь с нами: <a href="tel:+77000000000">+7 (700) 000-00-00</a> | <a href="mailto:info@coffeeboom.kz">info@coffeeboom.kz</a></p>
+        <p>Адрес:​ТРЦ MEGA Silk Way​Кабанбай батыр проспект 62, ​1 этаж, ​48 филиалов</p>
+        <p>&copy; 2026 Coffeeboom. Все права защищены.</p>
+    </footer>
+</body>
+</html>
